@@ -1,0 +1,3 @@
+[console_scripts]
+jina = jina_cli:main
+
