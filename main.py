@@ -23,4 +23,5 @@ def keep_alive() -> None:
 
 keep_alive()
 
-bot.start()
+
+bot.run(os.environ["BOT_TOKEN"])

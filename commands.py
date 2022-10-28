@@ -1,28 +1,19 @@
 from setup import *
 
-
-@bot.command(
+@bot.slash_command(
   name="describe",
   description="describe an image using CLIP Model",
-  options=[
-    interactions.Option(
-      name="image",
-      description="image to describe",
-      type=interactions.OptionType.ATTACHMENT,
-      required=True,
-    ),
-  ],
 )
-async def describe(ctx: interactions.CommandContext,
-                   image: interactions.Attachment) -> None:
-  await ctx.defer()
-
+async def describe(interaction: nextcord.Interaction, image: nextcord.Attachment = nextcord.SlashOption(required=True)) -> None:
+  await interaction.response.defer()
+  
   image_encoded = await client.aencode([image.url])
-  result = ", ".join(words_encoded.find(query=image_encoded,limit=5)[0].texts).strip()
+  
+  result = ", ".join(words_encoded.find(query=image_encoded, limit=5)[0].texts).strip()
 
-  embed = interactions.Embed(
-    image=interactions.EmbedImageStruct(url=image.url),
-    footer=interactions.EmbedFooter(text=result)
-  )
+  embed = nextcord.Embed()
+  embed.set_image(image.url)
+  embed.set_footer(text=result)
+  
+  await interaction.followup.send(embed=embed)
 
-  await ctx.send(embeds=embed)
