@@ -22,3 +22,6 @@ def construct_embed(text: str = None, image_url: str = None) -> nextcord.Embed:
   embed.color = nextcord.Color.blue()
 
   return embed
+
+def get_raw_key(user_key: str):
+  return "".join(user_key.split(".")[1:])
