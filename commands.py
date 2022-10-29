@@ -62,8 +62,8 @@ async def put_text(interaction: nextcord.Interaction,
 )
 async def get(interaction: nextcord.Interaction,
               key : str = nextcord.SlashOption(required=True,
-                                               description="text to get the item")) -> None:
-  
+                                               description="text to get the item")
+):  
   await interaction.response.defer()
 
   try:
