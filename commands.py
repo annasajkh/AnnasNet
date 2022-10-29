@@ -1,5 +1,5 @@
 from setup import *
-
+from utils import uri_validator, construct_embed
 
 
 @bot.slash_command(
@@ -16,14 +16,16 @@ async def put(interaction: nextcord.Interaction,
 
   try:
     print(db[key])
-    await interaction.followup.send(f"\"{key}\" aready exist in the database please use different key")
+    embed = construct_embed(text=f"\"{key}\" already exist in the database please use different key")
+    await interaction.followup.send(embed=embed)
     return
   except:
     pass
   
   db[key] = attachment.url
   
-  await interaction.followup.send(f"successfully put \"{key}\" into the database")
+  embed = construct_embed(text=f"successfully put \"{key}\" into the database")
+  await interaction.followup.send(embed=embed)
 
 
 
@@ -35,20 +37,22 @@ async def put_text(interaction: nextcord.Interaction,
               key : str = nextcord.SlashOption(required=True,
                                                description="text that will be used to get the item"),
               text : str = nextcord.SlashOption(required=True,
-                                                description="text itme to be put in")
+                                                description="text item to be put in")
 ):  
   await interaction.response.defer()
 
   try:
     print(db[key])
-    await interaction.followup.send(f"\"{key}\" aready exist in the database please use different key")
+    embed = construct_embed(text=f"\"{key}\" already exist in the database please use different key")
+    await interaction.followup.send(embed=embed)
     return
   except:
     pass
                 
   db[key] = text
-  
-  await interaction.followup.send(f"successfully put \"{key}\" into the database")
+
+  embed = construct_embed(text=f"successfully put \"{key}\" into the database")
+  await interaction.followup.send(embed=embed)
 
 
 
@@ -65,15 +69,16 @@ async def get(interaction: nextcord.Interaction,
   try:
     print(db[key])
   except:
-    await interaction.followup.send(f"database doesn't contain item with a key \"{key}\"")
+    embed = construct_embed(text=f"database doesn't have item with a key \"{key}\"")
+    await interaction.followup.send(embed=embed)
     return
   
   item = db[key]
-              
-  embed = nextcord.Embed()
-  if "https://" in item or "http://" in item:
-    embed.set_image(item)
+                                                 
+  if uri_validator(item):
+    embed = construct_embed(image_url=item)
   else:
+    embed = construct_embed(text=item)
     embed.set_footer(text=item)
   
   await interaction.followup.send(embed=embed)

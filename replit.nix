@@ -1,6 +1,5 @@
 { pkgs }: {
   deps = [
-    pkgs.busybox-sandbox-shell
     pkgs.python38Full
   ];
   env = {
