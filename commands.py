@@ -4,7 +4,7 @@ from utils import uri_validator, construct_embed
 
 @bot.slash_command(
   name="put",
-  description="put item into the database".strip(),
+  description="put item into the database",
 )
 async def put(interaction: nextcord.Interaction,
               key : str = nextcord.SlashOption(required=True,
@@ -31,7 +31,7 @@ async def put(interaction: nextcord.Interaction,
 
 @bot.slash_command(
   name="put_text",
-  description="put text item into the database".strip(),
+  description="put text item into the database",
 )
 async def put_text(interaction: nextcord.Interaction,
               key : str = nextcord.SlashOption(required=True,
@@ -58,7 +58,7 @@ async def put_text(interaction: nextcord.Interaction,
 
 @bot.slash_command(
   name="get",
-  description="get item from the database".strip(),
+  description="get item from the database",
 )
 async def get(interaction: nextcord.Interaction,
               key : str = nextcord.SlashOption(required=True,
