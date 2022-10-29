@@ -8,15 +8,15 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def main() -> None:
+def main():
   return "your bot is alive"
 
 
-def run() -> None:
+def run():
   serve(app, host="0.0.0.0", port=8080)
 
 
-def keep_alive() -> None:
+def keep_alive():
   server = Thread(target=run)
   server.start()
 

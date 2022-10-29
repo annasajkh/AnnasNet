@@ -1,13 +1,8 @@
 import os
 import nextcord
+
+from replit import db
 from nextcord.ext import commands
-
-import clip_client
-from docarray import DocumentArray
-
-client = clip_client.Client("https://demo-cas.jina.ai:8443")
-
-words_encoded = DocumentArray.load("src/words_encoded")
 
 bot = commands.Bot()
 

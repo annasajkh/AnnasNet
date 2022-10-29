@@ -1,12 +1,4 @@
 [[package]]
-name = "aiofiles"
-version = "22.1.0"
-description = "File support for asyncio."
-category = "main"
-optional = false
-python-versions = ">=3.7,<4.0"
-
-[[package]]
 name = "aiohttp"
 version = "3.8.3"
 description = "Async http client/server framework (asyncio)"
@@ -38,42 +30,6 @@ python-versions = ">=3.6"
 frozenlist = ">=1.1.0"
 
 [[package]]
-name = "aiostream"
-version = "0.4.5"
-description = "Generator-based operators for asynchronous iteration"
-category = "main"
-optional = false
-python-versions = "*"
-
-[[package]]
-name = "anyio"
-version = "3.6.2"
-description = "High level compatibility layer for multiple asynchronous event loop implementations"
-category = "main"
-optional = false
-python-versions = ">=3.6.2"
-
-[package.dependencies]
-idna = ">=2.8"
-sniffio = ">=1.1"
-
-[package.extras]
-doc = ["packaging", "sphinx-rtd-theme", "sphinx-autodoc-typehints (>=1.2.0)"]
-test = ["coverage[toml] (>=4.5)", "hypothesis (>=4.0)", "pytest (>=7.0)", "pytest-mock (>=3.6.1)", "trustme", "contextlib2", "uvloop (<0.15)", "mock (>=4)", "uvloop (>=0.15)"]
-trio = ["trio (>=0.16,<0.22)"]
-
-[[package]]
-name = "asgiref"
-version = "3.5.2"
-description = "ASGI specs, helper code, and adapters"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.extras]
-tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
-
-[[package]]
 name = "async-timeout"
 version = "4.0.2"
 description = "Timeout context manager for asyncio programs"
@@ -94,33 +50,6 @@ dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", 
 docs = ["furo", "sphinx", "zope.interface", "sphinx-notfound-page"]
 tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "mypy (>=0.900,!=0.940)", "pytest-mypy-plugins", "zope.interface", "cloudpickle"]
 tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "mypy (>=0.900,!=0.940)", "pytest-mypy-plugins", "cloudpickle"]
-
-[[package]]
-name = "backoff"
-version = "2.2.1"
-description = "Function decoration for backoff and retry"
-category = "main"
-optional = false
-python-versions = ">=3.7,<4.0"
-
-[[package]]
-name = "certifi"
-version = "2022.9.24"
-description = "Python package for providing Mozilla's CA Bundle."
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[[package]]
-name = "cffi"
-version = "1.15.1"
-description = "Foreign Function Interface for Python calling C code."
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-pycparser = "*"
 
 [[package]]
 name = "charset-normalizer"
@@ -145,22 +74,6 @@ python-versions = ">=3.7"
 colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
 [[package]]
-name = "clip-client"
-version = "0.8.0"
-description = "Embed images and sentences into fixed-length vectors via CLIP"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-docarray = {version = ">=0.16.1", extras = ["common"]}
-jina = ">=3.8.0"
-packaging = "*"
-
-[package.extras]
-test = ["pytest", "pytest-timeout", "pytest-mock", "pytest-asyncio", "pytest-cov", "pytest-repeat", "pytest-reraise", "mock", "pytest-custom-exit-code", "black"]
-
-[[package]]
 name = "colorama"
 version = "0.4.5"
 description = "Cross-platform colored terminal text."
@@ -169,161 +82,12 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
-name = "commonmark"
-version = "0.9.1"
-description = "Python parser for the CommonMark Markdown spec"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.extras]
-test = ["hypothesis (==3.55.3)", "flake8 (==3.7.8)"]
-
-[[package]]
-name = "contourpy"
-version = "1.0.5"
-description = "Python library for calculating contours of 2D quadrilateral grids"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-numpy = ">=1.16"
-
-[package.extras]
-test-no-codebase = ["pillow", "matplotlib", "pytest"]
-test-minimal = ["pytest"]
-test = ["isort", "flake8", "pillow", "matplotlib", "pytest"]
-docs = ["sphinx-rtd-theme", "sphinx", "docutils (<0.18)"]
-bokeh = ["selenium", "bokeh"]
-
-[[package]]
-name = "cryptography"
-version = "38.0.2"
-description = "cryptography is a package which provides cryptographic recipes and primitives to Python developers."
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-cffi = ">=1.12"
-
-[package.extras]
-docs = ["sphinx (>=1.6.5,!=1.8.0,!=3.1.0,!=3.1.1)", "sphinx-rtd-theme"]
-docstest = ["pyenchant (>=1.6.11)", "twine (>=1.12.0)", "sphinxcontrib-spelling (>=4.0.1)"]
-pep8test = ["black", "flake8", "flake8-import-order", "pep8-naming"]
-sdist = ["setuptools-rust (>=0.11.4)"]
-ssh = ["bcrypt (>=3.1.5)"]
-test = ["pytest (>=6.2.0)", "pytest-benchmark", "pytest-cov", "pytest-subtests", "pytest-xdist", "pretend", "iso8601", "pytz", "hypothesis (>=1.11.4,!=3.79.2)"]
-
-[[package]]
-name = "cycler"
-version = "0.11.0"
-description = "Composable style cycles"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[[package]]
 name = "debugpy"
 version = "1.6.3"
 description = "An implementation of the Debug Adapter Protocol for Python"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
-
-[[package]]
-name = "deprecated"
-version = "1.2.13"
-description = "Python @deprecated decorator to deprecate old python classes, functions or methods."
-category = "main"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-
-[package.dependencies]
-wrapt = ">=1.10,<2"
-
-[package.extras]
-dev = ["tox", "bump2version (<1)", "sphinx (<2)", "importlib-metadata (<3)", "importlib-resources (<4)", "configparser (<5)", "sphinxcontrib-websupport (<2)", "zipp (<2)", "PyTest (<5)", "PyTest-Cov (<2.6)", "pytest", "pytest-cov"]
-
-[[package]]
-name = "docarray"
-version = "0.18.1"
-description = "The data structure for unstructured data"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-fastapi = {version = "*", optional = true, markers = "extra == \"common\""}
-jina-hubble-sdk = ">=0.13.1"
-lz4 = {version = "*", optional = true, markers = "extra == \"common\""}
-matplotlib = {version = "*", optional = true, markers = "extra == \"common\""}
-numpy = "*"
-Pillow = {version = "*", optional = true, markers = "extra == \"common\""}
-protobuf = {version = ">=3.13.0", optional = true, markers = "extra == \"common\""}
-requests = {version = "*", optional = true, markers = "extra == \"common\""}
-rich = ">=12.0.0"
-uvicorn = {version = "*", optional = true, markers = "extra == \"common\""}
-
-[package.extras]
-annlite = ["annlite (==0.3.13)"]
-benchmark = ["pandas", "seaborn"]
-common = ["protobuf (>=3.13.0)", "lz4", "requests", "matplotlib", "pillow", "fastapi", "uvicorn"]
-elasticsearch = ["elasticsearch (>=8.2.0)"]
-full = ["protobuf (>=3.13.0)", "lz4", "requests", "matplotlib", "pillow", "trimesh", "scipy", "av", "fastapi", "uvicorn", "strawberry-graphql"]
-qdrant = ["qdrant-client (==0.8.0)"]
-redis = ["redis (>=4.3.0)"]
-test = ["pytest", "pytest-timeout", "pytest-mock", "pytest-cov", "pytest-repeat", "pytest-reraise", "mock", "pytest-custom-exit-code", "black (==22.3.0)", "tensorflow (==2.7.0)", "paddlepaddle (==2.2.0)", "torch (==1.9.0)", "torchvision (==0.10.0)", "datasets", "onnx", "onnxruntime", "jupyterlab", "transformers (>=4.16.2)", "weaviate-client (>=3.3.0,<3.4.0)", "annlite (>=0.3.12)", "elasticsearch (>=8.2.0)", "redis (>=4.3.0)", "jina"]
-weaviate = ["weaviate-client (>=3.3.0,<3.4.0)"]
-
-[[package]]
-name = "docker"
-version = "6.0.0"
-description = "A Python library for the Docker Engine API."
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-packaging = ">=14.0"
-pywin32 = {version = ">=304", markers = "sys_platform == \"win32\""}
-requests = ">=2.26.0"
-urllib3 = ">=1.26.0"
-websocket-client = ">=0.32.0"
-
-[package.extras]
-ssh = ["paramiko (>=2.4.3)"]
-
-[[package]]
-name = "fastapi"
-version = "0.85.1"
-description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-pydantic = ">=1.6.2,<1.7 || >1.7,<1.7.1 || >1.7.1,<1.7.2 || >1.7.2,<1.7.3 || >1.7.3,<1.8 || >1.8,<1.8.1 || >1.8.1,<2.0.0"
-starlette = "0.20.4"
-
-[package.extras]
-all = ["email-validator (>=1.1.1,<2.0.0)", "itsdangerous (>=1.1.0,<3.0.0)", "jinja2 (>=2.11.2,<4.0.0)", "orjson (>=3.2.1,<4.0.0)", "python-multipart (>=0.0.5,<0.0.6)", "pyyaml (>=5.3.1,<7.0.0)", "requests (>=2.24.0,<3.0.0)", "ujson (>=4.0.1,!=4.0.2,!=4.1.0,!=4.2.0,!=4.3.0,!=5.0.0,!=5.1.0,<6.0.0)", "uvicorn[standard] (>=0.12.0,<0.19.0)"]
-dev = ["autoflake (>=1.4.0,<2.0.0)", "flake8 (>=3.8.3,<6.0.0)", "pre-commit (>=2.17.0,<3.0.0)", "uvicorn[standard] (>=0.12.0,<0.19.0)"]
-doc = ["mdx-include (>=1.4.1,<2.0.0)", "mkdocs-markdownextradata-plugin (>=0.1.7,<0.3.0)", "mkdocs-material (>=8.1.4,<9.0.0)", "mkdocs (>=1.1.2,<2.0.0)", "pyyaml (>=5.3.1,<7.0.0)", "typer (>=0.4.1,<0.7.0)"]
-test = ["anyio[trio] (>=3.2.1,<4.0.0)", "black (==22.8.0)", "databases[sqlite] (>=0.3.2,<0.7.0)", "email-validator (>=1.1.1,<2.0.0)", "flake8 (>=3.8.3,<6.0.0)", "flask (>=1.1.2,<3.0.0)", "httpx (>=0.23.0,<0.24.0)", "isort (>=5.0.6,<6.0.0)", "mypy (==0.971)", "orjson (>=3.2.1,<4.0.0)", "passlib[bcrypt] (>=1.7.2,<2.0.0)", "peewee (>=3.13.3,<4.0.0)", "pytest-cov (>=2.12.0,<4.0.0)", "pytest (>=7.1.3,<8.0.0)", "python-jose[cryptography] (>=3.3.0,<4.0.0)", "python-multipart (>=0.0.5,<0.0.6)", "pyyaml (>=5.3.1,<7.0.0)", "requests (>=2.24.0,<3.0.0)", "sqlalchemy (>=1.3.18,<1.5.0)", "types-orjson (==3.6.2)", "types-ujson (==5.4.0)", "ujson (>=4.0.1,!=4.0.2,!=4.1.0,!=4.2.0,!=4.3.0,!=5.0.0,!=5.1.0,<6.0.0)"]
-
-[[package]]
-name = "filelock"
-version = "3.8.0"
-description = "A platform independent file lock."
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.extras]
-docs = ["furo (>=2022.6.21)", "sphinx (>=5.1.1)", "sphinx-autodoc-typehints (>=1.19.1)"]
-testing = ["covdefaults (>=2.2)", "coverage (>=6.4.2)", "pytest (>=7.1.2)", "pytest-cov (>=3)", "pytest-timeout (>=2.1)"]
 
 [[package]]
 name = "flask"
@@ -345,105 +109,12 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
-name = "fonttools"
-version = "4.38.0"
-description = "Tools to manipulate font files"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.extras]
-all = ["fs (>=2.2.0,<3)", "lxml (>=4.0,<5)", "zopfli (>=0.1.4)", "lz4 (>=1.7.4.2)", "matplotlib", "sympy", "skia-pathops (>=0.5.0)", "uharfbuzz (>=0.23.0)", "brotlicffi (>=0.8.0)", "scipy", "brotli (>=1.0.1)", "munkres", "unicodedata2 (>=14.0.0)", "xattr"]
-graphite = ["lz4 (>=1.7.4.2)"]
-interpolatable = ["scipy", "munkres"]
-lxml = ["lxml (>=4.0,<5)"]
-pathops = ["skia-pathops (>=0.5.0)"]
-plot = ["matplotlib"]
-repacker = ["uharfbuzz (>=0.23.0)"]
-symfont = ["sympy"]
-type1 = ["xattr"]
-ufo = ["fs (>=2.2.0,<3)"]
-unicode = ["unicodedata2 (>=14.0.0)"]
-woff = ["zopfli (>=0.1.4)", "brotlicffi (>=0.8.0)", "brotli (>=1.0.1)"]
-
-[[package]]
 name = "frozenlist"
 version = "1.3.1"
 description = "A list-like structure which implements collections.abc.MutableSequence"
 category = "main"
 optional = false
 python-versions = ">=3.7"
-
-[[package]]
-name = "googleapis-common-protos"
-version = "1.56.4"
-description = "Common protobufs used in Google APIs"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-protobuf = ">=3.15.0,<5.0.0dev"
-
-[package.extras]
-grpc = ["grpcio (>=1.0.0,<2.0.0dev)"]
-
-[[package]]
-name = "grpcio"
-version = "1.48.0"
-description = "HTTP/2-based RPC framework"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-six = ">=1.5.2"
-
-[package.extras]
-protobuf = ["grpcio-tools (>=1.48.0)"]
-
-[[package]]
-name = "grpcio-health-checking"
-version = "1.48.0"
-description = "Standard Health Checking Service for gRPC"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-grpcio = ">=1.48.0"
-protobuf = ">=3.12.0"
-
-[[package]]
-name = "grpcio-reflection"
-version = "1.48.0"
-description = "Standard Protobuf Reflection Service for gRPC"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-grpcio = ">=1.48.0"
-protobuf = ">=3.12.0"
-
-[[package]]
-name = "h11"
-version = "0.14.0"
-description = "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[[package]]
-name = "httptools"
-version = "0.5.0"
-description = "A collection of framework independent HTTP protocol utils."
-category = "main"
-optional = false
-python-versions = ">=3.5.0"
-
-[package.extras]
-test = ["Cython (>=0.29.24,<0.30.0)"]
 
 [[package]]
 name = "idna"
@@ -478,25 +149,6 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
-name = "jcloud"
-version = "0.0.36"
-description = "Simplify deploying and managing Jina projects on Jina Cloud"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-aiohttp = ">=3.8.0"
-jina-hubble-sdk = "*"
-packaging = "*"
-python-dotenv = "*"
-pyyaml = "*"
-rich = ">=12.0.0"
-
-[package.extras]
-test = ["pytest", "pytest-asyncio", "pytest-timeout", "pytest-mock", "pytest-cov", "pytest-repeat", "pytest-reraise", "pytest-env", "mock", "pytest-custom-exit-code", "black (==22.3.0)", "jina (>=3.7.0)"]
-
-[[package]]
 name = "jedi"
 version = "0.18.1"
 description = "An autocompletion tool for Python that can be used for text editors."
@@ -510,148 +162,6 @@ parso = ">=0.8.0,<0.9.0"
 [package.extras]
 qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
 testing = ["Django (<3.1)", "colorama", "docopt", "pytest (<7.0.0)"]
-
-[[package]]
-name = "jina"
-version = "3.11.0"
-description = "Build cross-modal and multi-modal applications on the cloud · Neural Search · Creative AI · Cloud Native · MLOps"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-aiofiles = "*"
-aiohttp = "*"
-aiostream = "*"
-cryptography = "*"
-docarray = [
-    {version = ">=0.16.4"},
-    {version = ">=0.16.3", extras = ["common"]},
-]
-docker = "*"
-fastapi = ">=0.76.0"
-filelock = "*"
-grpcio = ">=1.46.0,<1.48.1"
-grpcio-health-checking = ">=1.46.0,<1.48.1"
-grpcio-reflection = ">=1.46.0,<1.48.1"
-jcloud = ">=0.0.35"
-jina-hubble-sdk = "0.22.2"
-numpy = "*"
-opentelemetry-api = ">=1.12.0"
-opentelemetry-exporter-otlp = ">=1.12.0"
-opentelemetry-exporter-otlp-proto-grpc = ">=1.13.0"
-opentelemetry-exporter-prometheus = ">=1.12.0rc1"
-opentelemetry-instrumentation-aiohttp-client = ">=0.33b0"
-opentelemetry-instrumentation-fastapi = ">=0.33b0"
-opentelemetry-instrumentation-grpc = ">=0.33b0"
-opentelemetry-sdk = ">=1.12.0"
-opentelemetry-semantic-conventions = ">=0.33b0"
-packaging = ">=20.0"
-pathspec = "*"
-prometheus_client = "*"
-protobuf = ">=3.20.0"
-pydantic = "*"
-python-multipart = "*"
-pyyaml = ">=5.3.1"
-requests = "*"
-uvicorn = {version = "*", extras = ["standard"]}
-uvloop = "*"
-websockets = "*"
-
-[package.extras]
-Pillow = ["pillow"]
-aiofiles = ["aiofiles"]
-aiohttp = ["aiohttp"]
-aiostream = ["aiostream"]
-all = ["uvloop", "tensorflow (>=2.0)", "kubernetes (>=18.20.0)", "pathspec", "pytest-repeat", "sgqlc", "jina-hubble-sdk (==0.22.2)", "python-multipart", "prometheus-client", "pydantic", "uvicorn", "grpcio (>=1.46.0,<1.48.1)", "packaging (>=20.0)", "scipy (>=1.6.1)", "aiohttp", "requests-mock", "pytest-timeout", "opentelemetry-semantic-conventions (>=0.33b0)", "opentelemetry-api (>=1.12.0)", "docarray (>=0.16.4)", "pytest-mock", "pytest-kind (==21.1.3)", "pytest-cov (==3.0.0)", "prometheus-api-client (>=0.5.1)", "jsonschema", "grpcio-health-checking (>=1.46.0,<1.48.1)", "fastapi (>=0.76.0)", "pytest", "black (==22.3.0)", "cryptography", "protobuf (>=3.20.0)", "pyyaml (>=5.3.1)", "mock", "opentelemetry-test-utils (>=0.33b0)", "opentelemetry-exporter-otlp (>=1.12.0)", "grpcio-reflection (>=1.46.0,<1.48.1)", "aiofiles", "pillow", "numpy", "coverage (==6.2)", "opentelemetry-instrumentation-fastapi (>=0.33b0)", "websockets", "opentelemetry-sdk (>=1.12.0)", "pytest-asyncio", "requests", "psutil", "opentelemetry-exporter-prometheus (>=1.12.0rc1)", "opentelemetry-instrumentation-aiohttp-client (>=0.33b0)", "torch", "bs4", "opentelemetry-exporter-otlp-proto-grpc (>=1.13.0)", "docker", "filelock", "jcloud (>=0.0.35)", "portforward (>=0.2.4)", "strawberry-graphql (>=0.96.0)", "opentelemetry-instrumentation-grpc (>=0.33b0)", "docarray[common] (>=0.16.3)", "pytest-lazy-fixture", "pytest-reraise", "aiostream", "flaky", "pytest-custom-exit-code"]
-black = ["black (==22.3.0)"]
-bs4 = ["bs4"]
-cicd = ["tensorflow (>=2.0)", "torch", "bs4", "jsonschema", "portforward (>=0.2.4)", "sgqlc", "strawberry-graphql (>=0.96.0)"]
-core = ["packaging (>=20.0)", "grpcio-reflection (>=1.46.0,<1.48.1)", "opentelemetry-api (>=1.12.0)", "docarray (>=0.16.4)", "numpy", "jcloud (>=0.0.35)", "grpcio-health-checking (>=1.46.0,<1.48.1)", "jina-hubble-sdk (==0.22.2)", "opentelemetry-instrumentation-grpc (>=0.33b0)", "protobuf (>=3.20.0)", "pyyaml (>=5.3.1)", "grpcio (>=1.46.0,<1.48.1)"]
-coverage = ["coverage (==6.2)"]
-cryptography = ["cryptography"]
-devel = ["uvloop", "pathspec", "sgqlc", "python-multipart", "prometheus-client", "pydantic", "uvicorn", "aiohttp", "opentelemetry-semantic-conventions (>=0.33b0)", "fastapi (>=0.76.0)", "cryptography", "opentelemetry-exporter-otlp (>=1.12.0)", "aiofiles", "opentelemetry-instrumentation-fastapi (>=0.33b0)", "websockets", "opentelemetry-sdk (>=1.12.0)", "requests", "opentelemetry-exporter-prometheus (>=1.12.0rc1)", "opentelemetry-instrumentation-aiohttp-client (>=0.33b0)", "opentelemetry-exporter-otlp-proto-grpc (>=1.13.0)", "docker", "filelock", "strawberry-graphql (>=0.96.0)", "docarray[common] (>=0.16.3)", "aiostream"]
-docarray = ["docarray (>=0.16.4)"]
-"docarray[common" = ["docarray[common] (>=0.16.3)"]
-docker = ["docker"]
-fastapi = ["fastapi (>=0.76.0)"]
-filelock = ["filelock"]
-flaky = ["flaky"]
-grpcio = ["grpcio (>=1.46.0,<1.48.1)"]
-grpcio-health-checking = ["grpcio-health-checking (>=1.46.0,<1.48.1)"]
-grpcio-reflection = ["grpcio-reflection (>=1.46.0,<1.48.1)"]
-jcloud = ["jcloud (>=0.0.35)"]
-jina-hubble-sdk = ["jina-hubble-sdk (==0.22.2)"]
-jsonschema = ["jsonschema"]
-kubernetes = ["kubernetes (>=18.20.0)"]
-mock = ["mock"]
-numpy = ["numpy"]
-opentelemetry-api = ["opentelemetry-api (>=1.12.0)"]
-opentelemetry-exporter-otlp = ["opentelemetry-exporter-otlp (>=1.12.0)"]
-opentelemetry-exporter-otlp-proto-grpc = ["opentelemetry-exporter-otlp-proto-grpc (>=1.13.0)"]
-opentelemetry-exporter-prometheus = ["opentelemetry-exporter-prometheus (>=1.12.0rc1)"]
-opentelemetry-instrumentation-aiohttp-client = ["opentelemetry-instrumentation-aiohttp-client (>=0.33b0)"]
-opentelemetry-instrumentation-fastapi = ["opentelemetry-instrumentation-fastapi (>=0.33b0)"]
-opentelemetry-instrumentation-grpc = ["opentelemetry-instrumentation-grpc (>=0.33b0)"]
-opentelemetry-sdk = ["opentelemetry-sdk (>=1.12.0)"]
-opentelemetry-semantic-conventions = ["opentelemetry-semantic-conventions (>=0.33b0)"]
-opentelemetry-test-utils = ["opentelemetry-test-utils (>=0.33b0)"]
-packaging = ["packaging (>=20.0)"]
-pathspec = ["pathspec"]
-perf = ["uvloop", "opentelemetry-exporter-otlp (>=1.12.0)", "opentelemetry-exporter-prometheus (>=1.12.0rc1)", "opentelemetry-instrumentation-aiohttp-client (>=0.33b0)", "opentelemetry-semantic-conventions (>=0.33b0)", "opentelemetry-exporter-otlp-proto-grpc (>=1.13.0)", "opentelemetry-instrumentation-fastapi (>=0.33b0)", "opentelemetry-sdk (>=1.12.0)", "prometheus-client"]
-portforward = ["portforward (>=0.2.4)"]
-prometheus-api-client = ["prometheus-api-client (>=0.5.1)"]
-prometheus_client = ["prometheus-client"]
-protobuf = ["protobuf (>=3.20.0)"]
-psutil = ["psutil"]
-pydantic = ["pydantic"]
-pytest = ["pytest"]
-pytest-asyncio = ["pytest-asyncio"]
-pytest-cov = ["pytest-cov (==3.0.0)"]
-pytest-custom_exit_code = ["pytest-custom-exit-code"]
-pytest-kind = ["pytest-kind (==21.1.3)"]
-pytest-lazy-fixture = ["pytest-lazy-fixture"]
-pytest-mock = ["pytest-mock"]
-pytest-repeat = ["pytest-repeat"]
-pytest-reraise = ["pytest-reraise"]
-pytest-timeout = ["pytest-timeout"]
-python-multipart = ["python-multipart"]
-pyyaml = ["pyyaml (>=5.3.1)"]
-requests = ["requests"]
-requests-mock = ["requests-mock"]
-scipy = ["scipy (>=1.6.1)"]
-sgqlc = ["sgqlc"]
-standard = ["uvloop", "pathspec", "python-multipart", "prometheus-client", "pydantic", "uvicorn", "aiohttp", "opentelemetry-semantic-conventions (>=0.33b0)", "fastapi (>=0.76.0)", "cryptography", "opentelemetry-exporter-otlp (>=1.12.0)", "aiofiles", "opentelemetry-instrumentation-fastapi (>=0.33b0)", "websockets", "opentelemetry-sdk (>=1.12.0)", "requests", "opentelemetry-exporter-prometheus (>=1.12.0rc1)", "opentelemetry-instrumentation-aiohttp-client (>=0.33b0)", "filelock", "docker", "docarray[common] (>=0.16.3)", "aiostream"]
-standrad = ["opentelemetry-exporter-otlp-proto-grpc (>=1.13.0)"]
-strawberry-graphql = ["strawberry-graphql (>=0.96.0)"]
-tensorflow = ["tensorflow (>=2.0)"]
-test = ["kubernetes (>=18.20.0)", "pytest-repeat", "scipy (>=1.6.1)", "requests-mock", "pytest-timeout", "pytest-mock", "pytest-kind (==21.1.3)", "pytest-cov (==3.0.0)", "prometheus-api-client (>=0.5.1)", "pytest", "black (==22.3.0)", "mock", "pillow", "coverage (==6.2)", "pytest-asyncio", "psutil", "pytest-lazy-fixture", "pytest-reraise", "opentelemetry-test-utils (>=0.33b0)", "flaky", "pytest-custom-exit-code"]
-torch = ["torch"]
-"uvicorn[standard" = ["uvicorn"]
-uvloop = ["uvloop"]
-websockets = ["websockets"]
-
-[[package]]
-name = "jina-hubble-sdk"
-version = "0.22.2"
-description = "SDK for Hubble API at Jina AI."
-category = "main"
-optional = false
-python-versions = ">=3.7.0"
-
-[package.dependencies]
-aiohttp = "*"
-cryptography = "*"
-docker = "*"
-filelock = "*"
-importlib-metadata = "*"
-pathspec = "*"
-pyyaml = "*"
-requests = "*"
-rich = "*"
-
-[package.extras]
-full = ["black (==22.3.0)", "flake8 (==4.0.1)", "isort (==5.10.1)", "pytest (==7.0.0)", "pytest-asyncio (==0.19.0)", "pytest-cov (==3.0.0)", "pytest-mock (==3.7.0)", "mock (==4.0.3)", "requests", "aiohttp", "rich", "importlib-metadata", "filelock", "pathspec", "cryptography", "docker", "pyyaml"]
 
 [[package]]
 name = "jinja2"
@@ -668,27 +178,6 @@ MarkupSafe = ">=2.0"
 i18n = ["Babel (>=2.7)"]
 
 [[package]]
-name = "kiwisolver"
-version = "1.4.4"
-description = "A fast implementation of the Cassowary constraint solver"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[[package]]
-name = "lz4"
-version = "4.0.2"
-description = "LZ4 Bindings for Python"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.extras]
-docs = ["sphinx (>=1.6.0)", "sphinx-bootstrap-theme"]
-flake8 = ["flake8"]
-tests = ["pytest (!=3.3.0)", "psutil", "pytest-cov"]
-
-[[package]]
 name = "markupsafe"
 version = "2.1.1"
 description = "Safely add untrusted strings to HTML/XML markup."
@@ -697,39 +186,12 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
-name = "matplotlib"
-version = "3.6.1"
-description = "Python plotting package"
-category = "main"
-optional = false
-python-versions = ">=3.8"
-
-[package.dependencies]
-contourpy = ">=1.0.1"
-cycler = ">=0.10"
-fonttools = ">=4.22.0"
-kiwisolver = ">=1.0.1"
-numpy = ">=1.19"
-packaging = ">=20.0"
-pillow = ">=6.2.0"
-pyparsing = ">=2.2.1"
-python-dateutil = ">=2.7"
-
-[[package]]
 name = "multidict"
 version = "6.0.2"
 description = "multidict implementation"
 category = "main"
 optional = false
 python-versions = ">=3.7"
-
-[[package]]
-name = "nest-asyncio"
-version = "1.5.6"
-description = "Patch asyncio to allow nested event loops"
-category = "main"
-optional = false
-python-versions = ">=3.5"
 
 [[package]]
 name = "nextcord"
@@ -757,209 +219,10 @@ optional = false
 python-versions = ">=3.8"
 
 [[package]]
-name = "opentelemetry-api"
-version = "1.13.0"
-description = "OpenTelemetry Python API"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-deprecated = ">=1.2.6"
-
-[[package]]
-name = "opentelemetry-exporter-otlp"
-version = "1.13.0"
-description = "OpenTelemetry Collector Exporters"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-opentelemetry-exporter-otlp-proto-grpc = "1.13.0"
-opentelemetry-exporter-otlp-proto-http = "1.13.0"
-
-[[package]]
-name = "opentelemetry-exporter-otlp-proto-grpc"
-version = "1.13.0"
-description = "OpenTelemetry Collector Protobuf over gRPC Exporter"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-backoff = {version = ">=1.10.0,<3.0.0", markers = "python_version >= \"3.7\""}
-googleapis-common-protos = ">=1.52,<2.0"
-grpcio = ">=1.0.0,<2.0.0"
-opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-proto = "1.13.0"
-opentelemetry-sdk = ">=1.12,<2.0"
-
-[package.extras]
-test = ["pytest-grpc"]
-
-[[package]]
-name = "opentelemetry-exporter-otlp-proto-http"
-version = "1.13.0"
-description = "OpenTelemetry Collector Protobuf over HTTP Exporter"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-backoff = {version = ">=1.10.0,<3.0.0", markers = "python_version >= \"3.7\""}
-googleapis-common-protos = ">=1.52,<2.0"
-opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-proto = "1.13.0"
-opentelemetry-sdk = ">=1.12,<2.0"
-requests = ">=2.7,<3.0"
-
-[[package]]
-name = "opentelemetry-exporter-prometheus"
-version = "1.12.0rc1"
-description = "Prometheus Metric Exporter for OpenTelemetry"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-opentelemetry-api = ">=1.10.0"
-opentelemetry-sdk = ">=1.10.0"
-prometheus-client = ">=0.5.0,<1.0.0"
-
-[[package]]
-name = "opentelemetry-instrumentation"
-version = "0.34b0"
-description = "Instrumentation Tools & Auto Instrumentation for OpenTelemetry Python"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-opentelemetry-api = ">=1.4,<2.0"
-wrapt = ">=1.0.0,<2.0.0"
-
-[[package]]
-name = "opentelemetry-instrumentation-aiohttp-client"
-version = "0.34b0"
-description = "OpenTelemetry aiohttp client instrumentation"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-instrumentation = "0.34b0"
-opentelemetry-semantic-conventions = "0.34b0"
-opentelemetry-util-http = "0.34b0"
-wrapt = ">=1.0.0,<2.0.0"
-
-[package.extras]
-instruments = ["aiohttp (>=3.0,<4.0)"]
-test = ["opentelemetry-instrumentation-aiohttp-client"]
-
-[[package]]
-name = "opentelemetry-instrumentation-asgi"
-version = "0.34b0"
-description = "ASGI instrumentation for OpenTelemetry"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-asgiref = ">=3.0,<4.0"
-opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-instrumentation = "0.34b0"
-opentelemetry-semantic-conventions = "0.34b0"
-opentelemetry-util-http = "0.34b0"
-
-[package.extras]
-instruments = ["asgiref (>=3.0,<4.0)"]
-test = ["opentelemetry-instrumentation-asgi", "opentelemetry-test-utils (==0.34b0)"]
-
-[[package]]
-name = "opentelemetry-instrumentation-fastapi"
-version = "0.34b0"
-description = "OpenTelemetry FastAPI Instrumentation"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-instrumentation = "0.34b0"
-opentelemetry-instrumentation-asgi = "0.34b0"
-opentelemetry-semantic-conventions = "0.34b0"
-opentelemetry-util-http = "0.34b0"
-
-[package.extras]
-instruments = ["fastapi (>=0.58,<1.0)"]
-test = ["opentelemetry-instrumentation-fastapi", "opentelemetry-test-utils (==0.34b0)", "requests (>=2.23.0,<2.24.0)"]
-
-[[package]]
-name = "opentelemetry-instrumentation-grpc"
-version = "0.34b0"
-description = "OpenTelemetry gRPC instrumentation"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-instrumentation = "0.34b0"
-opentelemetry-sdk = ">=1.12,<2.0"
-opentelemetry-semantic-conventions = "0.34b0"
-wrapt = ">=1.0.0,<2.0.0"
-
-[package.extras]
-instruments = ["grpcio (>=1.27,<2.0)"]
-test = ["opentelemetry-instrumentation-grpc", "opentelemetry-sdk (>=1.12,<2.0)", "opentelemetry-test-utils (==0.34b0)", "protobuf (>=3.13,<4.0)"]
-
-[[package]]
-name = "opentelemetry-proto"
-version = "1.13.0"
-description = "OpenTelemetry Python Proto"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-protobuf = ">=3.13,<4.0"
-
-[[package]]
-name = "opentelemetry-sdk"
-version = "1.13.0"
-description = "OpenTelemetry Python SDK"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-opentelemetry-api = "1.13.0"
-opentelemetry-semantic-conventions = "0.34b0"
-typing-extensions = ">=3.7.4"
-
-[[package]]
-name = "opentelemetry-semantic-conventions"
-version = "0.34b0"
-description = "OpenTelemetry Semantic Conventions"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[[package]]
-name = "opentelemetry-util-http"
-version = "0.34b0"
-description = "Web util for OpenTelemetry"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[[package]]
 name = "packaging"
 version = "21.3"
 description = "Core utilities for Python packages"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -979,26 +242,6 @@ qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
 testing = ["docopt", "pytest (<6.0.0)"]
 
 [[package]]
-name = "pathspec"
-version = "0.10.1"
-description = "Utility library for gitignore style pattern matching of file paths."
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[[package]]
-name = "pillow"
-version = "9.2.0"
-description = "Python Imaging Library (Fork)"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.extras]
-docs = ["furo", "olefile", "sphinx (>=2.4)", "sphinx-copybutton", "sphinx-issues (>=3.0.1)", "sphinx-removed-in", "sphinxext-opengraph"]
-tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "packaging", "pyroma", "pytest", "pytest-cov", "pytest-timeout"]
-
-[[package]]
 name = "pluggy"
 version = "1.0.0"
 description = "plugin and hook calling mechanisms for python"
@@ -1011,48 +254,6 @@ testing = ["pytest-benchmark", "pytest"]
 dev = ["tox", "pre-commit"]
 
 [[package]]
-name = "prometheus-client"
-version = "0.15.0"
-description = "Python client for the Prometheus monitoring system."
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.extras]
-twisted = ["twisted"]
-
-[[package]]
-name = "protobuf"
-version = "3.20.3"
-description = "Protocol Buffers"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[[package]]
-name = "pycparser"
-version = "2.21"
-description = "C parser in Python"
-category = "main"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-
-[[package]]
-name = "pydantic"
-version = "1.9.2"
-description = "Data validation and settings management using python type hints"
-category = "main"
-optional = false
-python-versions = ">=3.6.1"
-
-[package.dependencies]
-typing-extensions = ">=3.7.4.3"
-
-[package.extras]
-dotenv = ["python-dotenv (>=0.10.4)"]
-email = ["email-validator (>=1.0.3)"]
-
-[[package]]
 name = "pyflakes"
 version = "2.5.0"
 description = "passive checker of Python programs"
@@ -1061,48 +262,15 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
-name = "pygments"
-version = "2.13.0"
-description = "Pygments is a syntax highlighting package written in Python."
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.extras]
-plugins = ["importlib-metadata"]
-
-[[package]]
 name = "pyparsing"
 version = "3.0.9"
 description = "pyparsing module - Classes and methods to define and execute parsing grammars"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6.8"
 
 [package.extras]
 diagrams = ["railroad-diagrams", "jinja2"]
-
-[[package]]
-name = "python-dateutil"
-version = "2.8.2"
-description = "Extensions to the standard Python datetime module"
-category = "main"
-optional = false
-python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
-
-[package.dependencies]
-six = ">=1.5"
-
-[[package]]
-name = "python-dotenv"
-version = "0.21.0"
-description = "Read key-value pairs from a .env file and set them as environment variables"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.extras]
-cli = ["click (>=5.0)"]
 
 [[package]]
 name = "python-lsp-jsonrpc"
@@ -1117,17 +285,6 @@ ujson = ">=3.0.0"
 
 [package.extras]
 test = ["coverage", "pytest-cov", "pytest", "pyflakes", "pycodestyle", "pylint"]
-
-[[package]]
-name = "python-multipart"
-version = "0.0.5"
-description = "A streaming multipart parser for Python"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-six = ">=1.4.0"
 
 [[package]]
 name = "pytoolconfig"
@@ -1146,22 +303,6 @@ validation = ["pydantic (>=1.7.4)"]
 global = ["appdirs (>=1.4.4)"]
 gen_docs = ["pytoolconfig", "sphinx-rtd-theme (>=1.0.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx (>=4.5.0)"]
 doc = ["sphinx (>=4.5.0)", "tabulate (>=0.8.9)"]
-
-[[package]]
-name = "pywin32"
-version = "304"
-description = "Python for Window Extensions"
-category = "main"
-optional = false
-python-versions = "*"
-
-[[package]]
-name = "pyyaml"
-version = "6.0"
-description = "YAML parser and emitter for Python"
-category = "main"
-optional = false
-python-versions = ">=3.6"
 
 [[package]]
 name = "replit-python-lsp-server"
@@ -1197,40 +338,6 @@ websockets = ["websockets (>=10.3)"]
 yapf = ["yapf", "whatthepatch (>=1.0.2,<2.0.0)"]
 
 [[package]]
-name = "requests"
-version = "2.28.1"
-description = "Python HTTP for Humans."
-category = "main"
-optional = false
-python-versions = ">=3.7, <4"
-
-[package.dependencies]
-certifi = ">=2017.4.17"
-charset-normalizer = ">=2,<3"
-idna = ">=2.5,<4"
-urllib3 = ">=1.21.1,<1.27"
-
-[package.extras]
-socks = ["PySocks (>=1.5.6,!=1.5.7)"]
-use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
-
-[[package]]
-name = "rich"
-version = "12.1.0"
-description = "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal"
-category = "main"
-optional = false
-python-versions = ">=3.6.2,<4.0.0"
-
-[package.dependencies]
-commonmark = ">=0.9.0,<0.10.0"
-pygments = ">=2.6.0,<3.0.0"
-typing-extensions = {version = ">=3.7.4,<5.0", markers = "python_version < \"3.9\""}
-
-[package.extras]
-jupyter = ["ipywidgets (>=7.5.1,<8.0.0)"]
-
-[[package]]
 name = "rope"
 version = "1.3.0"
 description = "a python refactoring library..."
@@ -1244,37 +351,6 @@ pytoolconfig = ">=1.1.2"
 [package.extras]
 doc = ["sphinx-rtd-theme (>=1.0.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx (>=4.5.0)", "pytoolconfig"]
 dev = ["build (>=0.7.0)", "pytest-timeout (>=2.1.0)", "pytest (>=7.0.1)"]
-
-[[package]]
-name = "six"
-version = "1.16.0"
-description = "Python 2 and 3 compatibility utilities"
-category = "main"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
-
-[[package]]
-name = "sniffio"
-version = "1.3.0"
-description = "Sniff out which async library your code is running under"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[[package]]
-name = "starlette"
-version = "0.20.4"
-description = "The little ASGI library that shines."
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-anyio = ">=3.4.0,<5"
-typing-extensions = {version = ">=3.10.0", markers = "python_version < \"3.10\""}
-
-[package.extras]
-full = ["itsdangerous", "jinja2", "python-multipart", "pyyaml", "requests"]
 
 [[package]]
 name = "toml"
@@ -1322,41 +398,6 @@ secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "cer
 socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
-name = "uvicorn"
-version = "0.19.0"
-description = "The lightning-fast ASGI server."
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-click = ">=7.0"
-colorama = {version = ">=0.4", optional = true, markers = "sys_platform == \"win32\" and extra == \"standard\""}
-h11 = ">=0.8"
-httptools = {version = ">=0.5.0", optional = true, markers = "extra == \"standard\""}
-python-dotenv = {version = ">=0.13", optional = true, markers = "extra == \"standard\""}
-pyyaml = {version = ">=5.1", optional = true, markers = "extra == \"standard\""}
-uvloop = {version = ">=0.14.0,<0.15.0 || >0.15.0,<0.15.1 || >0.15.1", optional = true, markers = "sys_platform != \"win32\" and sys_platform != \"cygwin\" and platform_python_implementation != \"PyPy\" and extra == \"standard\""}
-watchfiles = {version = ">=0.13", optional = true, markers = "extra == \"standard\""}
-websockets = {version = ">=10.0", optional = true, markers = "extra == \"standard\""}
-
-[package.extras]
-standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)", "pyyaml (>=5.1)", "uvloop (>=0.14.0,!=0.15.0,!=0.15.1)", "watchfiles (>=0.13)", "websockets (>=10.0)"]
-
-[[package]]
-name = "uvloop"
-version = "0.17.0"
-description = "Fast implementation of asyncio event loop on top of libuv"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.extras]
-dev = ["Cython (>=0.29.32,<0.30.0)", "pytest (>=3.6.0)", "Sphinx (>=4.1.2,<4.2.0)", "sphinxcontrib-asyncio (>=0.3.0,<0.4.0)", "sphinx-rtd-theme (>=0.5.2,<0.6.0)", "flake8 (>=3.9.2,<3.10.0)", "psutil", "pycodestyle (>=2.7.0,<2.8.0)", "pyOpenSSL (>=22.0.0,<22.1.0)", "mypy (>=0.800)", "aiohttp"]
-docs = ["Sphinx (>=4.1.2,<4.2.0)", "sphinxcontrib-asyncio (>=0.3.0,<0.4.0)", "sphinx-rtd-theme (>=0.5.2,<0.6.0)"]
-test = ["flake8 (>=3.9.2,<3.10.0)", "psutil", "pycodestyle (>=2.7.0,<2.8.0)", "pyOpenSSL (>=22.0.0,<22.1.0)", "mypy (>=0.800)", "Cython (>=0.29.32,<0.30.0)", "aiohttp"]
-
-[[package]]
 name = "waitress"
 version = "2.1.2"
 description = "Waitress WSGI server"
@@ -1367,38 +408,6 @@ python-versions = ">=3.7.0"
 [package.extras]
 docs = ["Sphinx (>=1.8.1)", "docutils", "pylons-sphinx-themes (>=1.0.9)"]
 testing = ["pytest", "pytest-cover", "coverage (>=5.0)"]
-
-[[package]]
-name = "watchfiles"
-version = "0.18.0"
-description = "Simple, modern and high performance file watching and code reload in python."
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-anyio = ">=3.0.0,<4"
-
-[[package]]
-name = "websocket-client"
-version = "1.4.1"
-description = "WebSocket client for Python with low level API options"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[package.extras]
-test = ["websockets"]
-optional = ["wsaccel", "python-socks"]
-docs = ["sphinx-rtd-theme (>=0.5)", "Sphinx (>=3.4)"]
-
-[[package]]
-name = "websockets"
-version = "10.4"
-description = "An implementation of the WebSocket Protocol (RFC 6455 & 7692)"
-category = "main"
-optional = false
-python-versions = ">=3.7"
 
 [[package]]
 name = "werkzeug"
@@ -1421,14 +430,6 @@ description = "A patch parsing and application library."
 category = "dev"
 optional = false
 python-versions = "*"
-
-[[package]]
-name = "wrapt"
-version = "1.14.1"
-description = "Module for decorators, wrappers and monkey patching."
-category = "main"
-optional = false
-python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 
 [[package]]
 name = "yapf"
@@ -1465,113 +466,45 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.0,<3.9"
-content-hash = "21fd70508d2008b9baf552f6df6b260bf5659f5d7e9cd36513af3e93eb73ca15"
+content-hash = "d5108dadf672fb7cefb9eab9b402c5393419cb4d7b4a059b321a7d613e8700ad"
 
 [metadata.files]
-aiofiles = []
 aiohttp = []
 aiosignal = []
-aiostream = []
-anyio = []
-asgiref = []
 async-timeout = []
 attrs = []
-backoff = []
-certifi = []
-cffi = []
 charset-normalizer = []
 click = []
-clip-client = []
 colorama = []
-commonmark = []
-contourpy = []
-cryptography = []
-cycler = []
 debugpy = []
-deprecated = []
-docarray = []
-docker = []
-fastapi = []
-filelock = []
 flask = []
-fonttools = []
 frozenlist = []
-googleapis-common-protos = []
-grpcio = []
-grpcio-health-checking = []
-grpcio-reflection = []
-h11 = []
-httptools = []
 idna = []
 importlib-metadata = []
 itsdangerous = []
-jcloud = []
 jedi = []
-jina = []
-jina-hubble-sdk = []
 jinja2 = []
-kiwisolver = []
-lz4 = []
 markupsafe = []
-matplotlib = []
 multidict = []
-nest-asyncio = []
 nextcord = []
 numpy = []
-opentelemetry-api = []
-opentelemetry-exporter-otlp = []
-opentelemetry-exporter-otlp-proto-grpc = []
-opentelemetry-exporter-otlp-proto-http = []
-opentelemetry-exporter-prometheus = []
-opentelemetry-instrumentation = []
-opentelemetry-instrumentation-aiohttp-client = []
-opentelemetry-instrumentation-asgi = []
-opentelemetry-instrumentation-fastapi = []
-opentelemetry-instrumentation-grpc = []
-opentelemetry-proto = []
-opentelemetry-sdk = []
-opentelemetry-semantic-conventions = []
-opentelemetry-util-http = []
 packaging = []
 parso = []
-pathspec = []
-pillow = []
 pluggy = []
-prometheus-client = []
-protobuf = []
-pycparser = []
-pydantic = []
 pyflakes = []
-pygments = []
 pyparsing = []
-python-dateutil = []
-python-dotenv = []
 python-lsp-jsonrpc = []
-python-multipart = []
 pytoolconfig = []
-pywin32 = []
-pyyaml = []
 replit-python-lsp-server = []
-requests = []
-rich = []
 rope = []
-six = []
-sniffio = []
-starlette = []
 toml = []
 tomli = []
 typing-extensions = []
 ujson = []
 urllib3 = []
-uvicorn = []
-uvloop = []
 waitress = []
-watchfiles = []
-websocket-client = []
-websockets = []
 werkzeug = []
 whatthepatch = []
-wrapt = []
 yapf = []
 yarl = []
 zipp = []
