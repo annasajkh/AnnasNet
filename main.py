@@ -23,5 +23,9 @@ def keep_alive():
 
 keep_alive()
 
-
-bot.run(os.environ["BOT_TOKEN"])
+try:
+  bot.run(os.environ["BOT_TOKEN"])
+except discord.errors.HTTPException:
+  print("\n\n\nBLOCKED BY RATE LIMITS\nRESTARTING NOW\n\n\n")
+  system("python restart.py")
+  system("kill 1")
